@@ -1,0 +1,52 @@
+html, 
+body,
+#map {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.feat-popup {
+    font-size: 1.05em;
+}
+
+.feat-popup h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.feat-popup img {
+    max-width: 100%;
+    border: 1px solid #000;
+}
+
+#attQueryBtn,
+#spatialQueryBtn {
+    display: block;
+    position: absolute;   
+    z-index: 1000;
+    padding: 5px;
+    right: 15px;
+}
+
+#attQueryBtn {
+    top: 15px;
+    
+}
+
+#spatialQueryBtn {
+    top: 60px;
+}
