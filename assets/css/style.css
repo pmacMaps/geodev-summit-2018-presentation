@@ -1,0 +1,106 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: url(../media/skyline-buildings.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+section,
+h1,
+p,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+.wrap {
+   max-width: 1000px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.header {
+    padding: 30px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2em;
+}
+
+.header h1 > br {
+    display: none;
+}
+
+.element {
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #000;
+    background: #fff;
+    line-height: 1.5em;
+}
+
+.element p,
+.element ul {
+    text-align: left;
+    font-size: 1em;
+}
+
+a.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px;
+    border: 3px solid #B4D79E;
+    background: #333;
+    color: #B4D79E;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-transition: color 0.2s, background 0.2s;
+    -moz-transition: color 0.2s, background 0.2s;
+    -o-transition: color 0.2s, background 0.2s;
+    transition: color 0.2s, background 0.2s;
+}
+
+a.btn:hover,
+a.btn:focus {
+    background: #B4D79E;
+    color: #fff;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+/*** Media Query ***/
+@media screen and (max-width: 700px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+        
+    .header h1 > br {
+    display: inline;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .wrap {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
