@@ -6,7 +6,7 @@
 // typically use with a form to gather user inputs
 
 // map/feature service we will query against
-let queryUrl = '//gis.ccpa.net/arcgiswebadaptor/rest/services/ArcGIS_Online/LandTrailsData/MapServer/0';
+let queryUrl = 'https://gis.ccpa.net/arcgiswebadaptor/rest/services/Planning/Land_Trails/MapServer/0';
 
 // 1. Attribute Query
 // function to run attribute query
