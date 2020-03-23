@@ -39,29 +39,11 @@ let baseMaps = {
    "Spring": esriSpring
 };
 
-// [3] Overlays
-// Dynamic Map Layer - L.esri.DynamicMapLayer
-// rasterized display of web service
-let caedcSites = L.esri.dynamicMapLayer({
-    // url of service
-    url: '//gis.ccpa.net/arcgiswebadaptor/rest/services/CAEDC/IDM_Sites/MapServer',
-    // output format of image
-    format: 'png24',
-    // attribution
-    attribution: 'Cumberland County',
-    // include only select sub-layers
-    layers: [3,5,7,8],
-    // set max zoom level
-    maxZoom: 15,
-    // set min zoom level
-    minZoom: 9
-}).addTo(map);
-
 // Dynamic Map Layer - L.esri.DynamicMapLayer
 // if you want to include all sub-layers, just you can construct the map layer this simply
 let waterTrails = L.esri.dynamicMapLayer({
     // url of service
-    url: '//gis.ccpa.net/arcgiswebadaptor/rest/services/ArcGIS_Online/WaterTrailsData/MapServer'   
+    url: 'https://gis.ccpa.net/arcgiswebadaptor/rest/services/Planning/Water_Trails/MapServer'   
 }).addTo(map);
 
 // Feature Layer - L.esri.FeatureLayer
@@ -70,7 +52,7 @@ let waterTrails = L.esri.dynamicMapLayer({
 // must include number at end of service
 let landTrails = L.esri.featureLayer({
     // url for service
-    url: '//gis.ccpa.net/arcgiswebadaptor/rest/services/ArcGIS_Online/LandTrailsData/MapServer/0',
+    url: 'https://gis.ccpa.net/arcgiswebadaptor/rest/services/Planning/Land_Trails/MapServer/0',
     // simplify factor to increase performance
     simplifyFactor: 2,
     // renderer - L.svg() is preferred, but L.canvas() may be better for large polygon layers
@@ -80,7 +62,6 @@ let landTrails = L.esri.featureLayer({
 // create an object to contain overlay layers
 // we can add this to our layer selector control
 let overlayLayers = {
-    "Business Sites": caedcSites,
     "Water Trails": waterTrails,
     "Land Trails": landTrails
 };
