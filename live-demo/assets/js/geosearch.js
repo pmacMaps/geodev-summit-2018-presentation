@@ -19,7 +19,7 @@ const agolProvider = L.esri.Geocoding.arcgisOnlineProvider({
 // Cumberland County Roads Geocode
 const ccpaRoadsProvider = L.esri.Geocoding.geocodeServiceProvider({
     // url for service
-    url: '//gis.ccpa.net/arcgiswebadaptor/rest/services/Roads_Locator/GeocodeServer',
+    url: 'https://gis.ccpa.net/arcgiswebadaptor/rest/services/Locators/Roads_Locator/GeocodeServer',
     // label for results group
     label: 'Cumberland County',
     // max results returned
@@ -29,12 +29,12 @@ const ccpaRoadsProvider = L.esri.Geocoding.geocodeServiceProvider({
 // Feature Layer - PaMAGIC Members
 const pmgMembersProvider = L.esri.Geocoding.featureLayerProvider({
     // url for service
-    url: 'https://services1.arcgis.com/1Cfo0re3un0w6a30/ArcGIS/rest/services/PAMAGIC_Members_Region_Limited_092017/FeatureServer/0/',
+    url: 'https://services2.arcgis.com/1mAVlDOwOjpt8pyU/ArcGIS/rest/services/PAMAGIC_Members_Region_07_2019/FeatureServer/0',
     // fields to search within
     searchFields: ['First_Name', 'Last_Name', 'Organizati'],
     // format of results
     formatSuggestion: function(feature) {
-        return feature.properties.First_Name + ' ' + feature.properties.Last_Name + ' (' + feature.properties.Organizati + ')';
+        return feature.properties.First_Name + ' ' + feature.properties.Last_Name + ' (' + feature.properties.Organization + ')';
     },
     // label for results
     label: 'PaMAGIC Members',
